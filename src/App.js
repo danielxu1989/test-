@@ -6,6 +6,7 @@ const TodoList = () => {
 
   const [items, dispatch] = useReducer((state, action) => {
     if (action.type === "add") {
+      console.log(action)
       return [
         ...state,
         {
@@ -16,6 +17,7 @@ const TodoList = () => {
     }
     if (action.type === "remove") {
       return state.filter((item, index) => {
+        console.log(action)
         return index !== action.name;
       })
     }

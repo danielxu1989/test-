@@ -1,0 +1,12 @@
+branches:
+  only:
+    - master
+cache:
+  directories:
+    - node_modules
+deploy: 
+  api_key: $API_KEY
+  app: react-lalalala
+  provider: heroku
+language: node_js
+node_js: "12"
